@@ -7,8 +7,9 @@ const ImagineCards = props => (
 		onClick={() => props.handleClick(props.id)}
 	> 
 		<div>
-			<p>words</p>
-			<img alt={props.name} src={props.image} />
+			<img alt={props.name} 
+
+			src={(window.location.origin + props.image)} />
 		</div>
 	</div> 
 );

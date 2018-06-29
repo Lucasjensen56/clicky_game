@@ -1,7 +1,28 @@
 [
 	{
+		"id": 1,
+		"image": "/imageFiles/harryCard.png",
+		"clicked": false
+	},
+	{
 		"id": 2,
-		"image": "https://en.wikipedia.org/wiki/Harry_Potter_(character)#/media/File:Harry_Potter_character_poster.jpg",
+		"image": "/imageFiles/hermonie.png",
+		"clicked": false
+	},
+	
+	{
+		"id": 3,
+		"image": "/imageFiles/lucius.png",
+		"clicked": false
+	},
+	{
+		"id": 4,
+		"image": "/imageFiles/ron.png",
+		"clicked": false
+	},
+	{
+		"id": 5,
+		"image": "/imageFiles/voldy.png",
 		"clicked": false
 	}
 
