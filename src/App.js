@@ -9,6 +9,8 @@ import Row from "./components/Row";
 import Column from "./components/Column";
 import cards from "./cards.json";
 import './App.css';
+import GridList from '@material-ui/core/GridList';
+
 
 function shuffleCards(array) {
 	for (let i = array.length -1; i > 0; i--) {
@@ -16,8 +18,8 @@ function shuffleCards(array) {
 		[array[i], array[j]] = [array[j], array[i]];
 	}
 	return array
-	console.log(array)
 }
+
 
 
 
@@ -25,7 +27,7 @@ class App extends Component {
 
 	state = {
 		cards,
-		userScore: 0,
+		currentScore: 0,
 		topScore: 0,
 		winOrLoseMessage: "",
 		clicked: []
@@ -34,37 +36,35 @@ class App extends Component {
 	handleClick = id => {
 		if (this.state.clicked.indexOf(id) === -1) {
 			this.handleIncrement();
-			this.setState({ clicked: this.state.clicked.concat(id) }, () => {
-				console.log("Ids that were clicked " + this.state.clicked)
-			})
+			this.setState({ clicked: this.state.clicked.concat(id) })
 		} else {
 			this.handleResetCards();
 		}
 	};
 
 	handleIncrement = () => {
-		const updatedScore = this.state.userScore + 1;
+		const updatedScore = this.state.currentScore + 1;
 		this.setState({
-			userScore: updatedScore,
+			currentScore: updatedScore,
 			winOrLoseMessage: ""
 		}, () => {
-			console.log(this.updatedScore)
-			console.log("this is the userscore " + this.state.userScore)
+			console.log("this is the currentScore " + this.state.currentScore)
 		})
-		if (updatedScore >= this.state.userScore) {
+		if (updatedScore >= this.state.currentScore) {
 			this.setState({ topScore: updatedScore }, () => {
-				console.log(this.state.topScore)
+				console.log("Top Score is " + this.state.topScore)
 			})
 		} else if  (updatedScore === 5 ) {
-			this.setState({ winOrLoseMessage: "Winner!!" }, () => {
-				console.log(updatedScore)
-			})
+			this.setState({ winOrLoseMessage: "Winner!!" }, () => 
+				console.log("updated Score " + updatedScore)
+				)
 		}
+		this.handleShuffleCards();
 	}
 
 	handleResetCards = () => {
 		this.setState({
-			userScore: 0,
+			currentScore: 0,
 			topScore: this.state.topScore,
 			winOrLoseMessage: "You lose! Try Again",
 			clicked: []
@@ -85,28 +85,30 @@ class App extends Component {
 			<Container>
 				<NavBar /> 
 				<Title
-					usersScore={this.state.userScore}
+					currentScore={this.state.currentScore}
 					topScore={this.state.topScore}
 					winOrLoseMessage={this.state.winOrLoseMessage}
 
 				 />
 				<div>
 					<Row>
-						{this.state.cards.map(card => (
-	
-								<ImagineCards
-									key={card.id}
-									handleClick={this.handleClick}
-									handleIncrement={this.handleIncrement}
-									handleResetCards={this.handleResetCards}
-									handleShuffleCards={this.handleShuffleCards}
-									id={card.id}
-									image={card.image}
-								/>
+							{this.state.cards.map(card => (
+									<ImagineCards
+										key={card.id}
+										handleClick={this.handleClick}
+										handleIncrement={this.handleIncrement}
+										handleResetCards={this.handleResetCards}
+										handleShuffleCards={this.handleShuffleCards}
+										id={card.id}
+										image={card.image}
+									/>
 
-						))}
+							))}
+			
+
 					</Row>
 				</div>
+			
 			</Container>
 		)
 	}

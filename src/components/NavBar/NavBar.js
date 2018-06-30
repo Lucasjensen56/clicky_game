@@ -1,25 +1,26 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import AppBar from '@material-ui/core/AppBar'
+import Toolbar from '@material-ui/core/Toolbar'
+import Typography from '@material-ui/core/Typography'
 
 
 
 
+const NavBar = () => {
+  return (
+      <div>
+        <AppBar position="static">
+          <Typography variant="title" color="inherit">
+            Click Game
+          </Typography>
+        </AppBar>
+      </div>
+    )
 
-const NavBar = props => (
-
-	<nav>
-    <div className="nav-wrapper">
-      <a className="brand-logo">Clicky Game</a>
-      <ul id="nav-mobile" className="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
-      </ul>
-    </div>
-  </nav>
+}
 
 
-);
+// const NavBar = props => (
 
 
 export default NavBar;
