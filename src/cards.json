@@ -24,6 +24,51 @@
 		"id": 5,
 		"image": "/imageFiles/voldy.png",
 		"clicked": false
+	},
+	{
+		"id": 6,
+		"image": "/imageFiles/bella.png",
+		"clicked": false
+	},
+	{
+		"id": 7,
+		"image": "/imageFiles/dobby.png",
+		"clicked": false
+	},
+	{
+		"id": 8,
+		"image": "/imageFiles/draco.png",
+		"clicked": false
+	},
+	{
+		"id": 9,
+		"image": "/imageFiles/dumbledore.png",
+		"clicked": false
+	},
+	{
+		"id": 10,
+		"image": "/imageFiles/fred.png",
+		"clicked": false
+	},
+	{
+		"id":11,
+		"image": "/imageFiles/luna.jpeg",
+		"clicked": false
+	},
+	{
+		"id": 12,
+		"image": "/imageFiles/sirius.jpeg",
+		"clicked": false
+	},
+	{
+		"id": 5,
+		"image": "/imageFiles/snape.jpeg",
+		"clicked": false
 	}
 
 ]
+
+
+
+
+

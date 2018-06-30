@@ -1,0 +1,29 @@
+[
+	{
+		"id": 1,
+		"image": "/imageFiles/harryCard.png",
+		"clicked": false
+	},
+	{
+		"id": 2,
+		"image": "/imageFiles/hermonie.png",
+		"clicked": false
+	},
+	
+	{
+		"id": 3,
+		"image": "/imageFiles/lucius.png",
+		"clicked": false
+	},
+	{
+		"id": 4,
+		"image": "/imageFiles/ron.png",
+		"clicked": false
+	},
+	{
+		"id": 5,
+		"image": "/imageFiles/voldy.png",
+		"clicked": false
+	}
+
+]

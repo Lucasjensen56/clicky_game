@@ -9,7 +9,7 @@ import Row from "./components/Row";
 import Column from "./components/Column";
 import cards from "./cards.json";
 import './App.css';
-import GridList from '@material-ui/core/GridList';
+import GridList from "./components/GridList"
 
 
 function shuffleCards(array) {
@@ -78,7 +78,6 @@ class App extends Component {
 			() => console.log(this.state.cards))
 	};
 
-	
 
 	render() {
 		return (
@@ -90,6 +89,17 @@ class App extends Component {
 					winOrLoseMessage={this.state.winOrLoseMessage}
 
 				 />
+
+
+
+				<GridList
+					handleClick={this.handleClick}
+					handleIncrement={this.handleIncrement}
+					handleResetCards={this.handleResetCards}
+					handleShuffleCards={this.handleShuffleCards}
+				/>
+
+				{/*
 				<div>
 					<Row>
 							{this.state.cards.map(card => (
@@ -108,6 +118,10 @@ class App extends Component {
 
 					</Row>
 				</div>
+			*/}
+
+
+
 			
 			</Container>
 		)

@@ -20,9 +20,6 @@ const NavBar = () => {
 }
 
 
-// const NavBar = props => (
-
-
 export default NavBar;
 
 
