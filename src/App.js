@@ -2,14 +2,13 @@
 import React, { Component } from "react";
 // import { BrowserRouter as Router, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
-import Title from "./components/Title";
 import ImagineCards from "./components/ImagineCards";
 import Container from "./components/Container"
 import Row from "./components/Row";
-import Column from "./components/Column";
 import cards from "./cards.json";
 import './App.css';
-import GridList from "./components/GridList"
+import GridList from "./components/GridList";
+import ScoreCard from "./components/ScoreCard";
 
 
 function shuffleCards(array) {
@@ -83,10 +82,10 @@ class App extends Component {
 		return (
 			<Container>
 				<NavBar /> 
-				<Title
-					currentScore={this.state.currentScore}
+				 <ScoreCard
+				 	currentScore={this.state.currentScore}
 					topScore={this.state.topScore}
-					winOrLoseMessage={this.state.winOrLoseMessage}
+					winOrLoseMessage={this.state.winOrLoseMessage} 
 
 				 />
 
@@ -99,7 +98,7 @@ class App extends Component {
 					handleShuffleCards={this.handleShuffleCards}
 				/>
 
-				{/*
+				
 				<div>
 					<Row>
 							{this.state.cards.map(card => (
@@ -118,11 +117,8 @@ class App extends Component {
 
 					</Row>
 				</div>
-			*/}
+		
 
-
-
-			
 			</Container>
 		)
 	}

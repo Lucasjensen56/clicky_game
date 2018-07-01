@@ -59,11 +59,6 @@
 		"id": 12,
 		"image": "/imageFiles/sirius.jpeg",
 		"clicked": false
-	},
-	{
-		"id": 5,
-		"image": "/imageFiles/snape.jpeg",
-		"clicked": false
 	}
 
 ]
