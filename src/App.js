@@ -86,39 +86,13 @@ class App extends Component {
 				 	currentScore={this.state.currentScore}
 					topScore={this.state.topScore}
 					winOrLoseMessage={this.state.winOrLoseMessage} 
-
 				 />
-
-
-
 				<GridList
 					handleClick={this.handleClick}
 					handleIncrement={this.handleIncrement}
 					handleResetCards={this.handleResetCards}
 					handleShuffleCards={this.handleShuffleCards}
 				/>
-
-				
-				<div>
-					<Row>
-							{this.state.cards.map(card => (
-									<ImagineCards
-										key={card.id}
-										handleClick={this.handleClick}
-										handleIncrement={this.handleIncrement}
-										handleResetCards={this.handleResetCards}
-										handleShuffleCards={this.handleShuffleCards}
-										id={card.id}
-										image={card.image}
-									/>
-
-							))}
-			
-
-					</Row>
-				</div>
-		
-
 			</Container>
 		)
 	}
