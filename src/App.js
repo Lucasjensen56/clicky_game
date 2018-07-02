@@ -86,7 +86,11 @@ class App extends Component {
 				 	currentScore={this.state.currentScore}
 					topScore={this.state.topScore}
 					winOrLoseMessage={this.state.winOrLoseMessage} 
+
 				 />
+
+
+
 				<GridList
 					handleClick={this.handleClick}
 					handleIncrement={this.handleIncrement}
@@ -94,6 +98,7 @@ class App extends Component {
 					handleShuffleCards={this.handleShuffleCards}
 				/>
 
+				
 				<div>
 					<Row>
 							{this.state.cards.map(card => (
