@@ -88,10 +88,10 @@ class GuttersGrid extends React.Component {
               <Grid key={card} item
               className="card" 
               value={card.id}
-              onClick={() => props.handleClick(card.id)} 
+              onClick={() => this.props.handleClick(card.id)} 
 
               >
-                <img src={(window.location.origin + card.image)} alt={card.title}/>
+                <img src={("https://github.com/Lucasjensen56/clicky_game/blob/master/public" + card.image)} alt={card.title}/>
               </Grid>
             ))}
           </Grid>
