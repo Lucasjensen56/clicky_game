@@ -1,14 +1,19 @@
-Harry Potter Memory Game
 
-This project is created through React using Creat React App 
 
-# Install Instructions 
 
-  * Clone or download to your local repo
+
+# ${Harry Potter Memory Game}
+	This is a simple app created with react to test your memory with your favorite Harry Potter Charactrs. 
+
+## Installation
+Clone or download to your local repo
   * npm install (to install all node modules)
   * npm start
+## Usage
 
-# heroku Deployment
+## Deployment
 
-	https://harry-potter-clicky-game.herokuapp.com
+	[link](https://harry-potter-clicky-game.herokuapp.com)
+
+
 
