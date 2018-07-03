@@ -2,7 +2,7 @@
 
 
 
-# ${Harry Potter Memory Game}
+# Harry Potter Memory Game
 	This is a simple app created with react to test your memory with your favorite Harry Potter Charactrs. 
 
 ## Installation

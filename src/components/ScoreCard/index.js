@@ -8,11 +8,10 @@ import Typography from '@material-ui/core/Typography';
 const styles = {
   card: {
     minWidth: 275,
+    textAlign: 'center'
   },
-  bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)',
+  cardTitle: {
+    marginBottom: 38
   },
   title: {
     marginBottom: 16,
@@ -30,7 +29,7 @@ function SimpleCard(props) {
     <div>
       <Card className={classes.card}>
         <CardContent>
-          <Typography variant="headline" component="h2">
+          <Typography className={classes.cardTitle} variant="headline" component="h2">
             Click on an image to earn points, if you click on a image twice you loose
           </Typography>
           <Typography variant="Display 1" component="h3">
