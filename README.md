@@ -8,3 +8,7 @@ This project is created through React using Creat React App
   * npm install (to install all node modules)
   * npm start
 
+# heroku Deployment
+
+	https://harry-potter-clicky-game.herokuapp.com
+

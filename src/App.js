@@ -2,9 +2,7 @@
 import React, { Component } from "react";
 // import { BrowserRouter as Router, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
-import ImagineCards from "./components/ImagineCards";
 import Container from "./components/Container"
-import Row from "./components/Row";
 import cards from "./cards.json";
 import './App.css';
 import GridList from "./components/GridList";
@@ -18,7 +16,6 @@ function shuffleCards(array) {
 	}
 	return array
 }
-
 
 
 
@@ -42,20 +39,20 @@ class App extends Component {
 	};
 
 	handleIncrement = () => {
-		const updatedScore = this.state.currentScore + 1;
+		const newScore = this.state.currentScore + 1;
 		this.setState({
-			currentScore: updatedScore,
+			currentScore: newScore,
 			winOrLoseMessage: ""
 		}, () => {
 			console.log("this is the currentScore " + this.state.currentScore)
-		})
-		if (updatedScore >= this.state.currentScore) {
-			this.setState({ topScore: updatedScore }, () => {
+		});
+		if (newScore >= this.state.topScore) {
+			this.setState({ topScore: newScore }, () => {
 				console.log("Top Score is " + this.state.topScore)
 			})
-		} else if  (updatedScore === 5 ) {
+		} else if  (newScore === 12 ) {
 			this.setState({ winOrLoseMessage: "Winner!!" }, () => 
-				console.log("updated Score " + updatedScore)
+				console.log("updated Score " + newScore)
 				)
 		}
 		this.handleShuffleCards();
@@ -67,8 +64,8 @@ class App extends Component {
 			topScore: this.state.topScore,
 			winOrLoseMessage: "You lose! Try Again",
 			clicked: []
-		}, 
-		() => console.log(this.state.clicked) )
+		})
+		this.handleShuffleCards();
 	};
 
 	handleShuffleCards = () => {

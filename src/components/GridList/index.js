@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import cards from "../../cards.json"
 import Grid from '@material-ui/core/Grid';
+ 
 
 
 
@@ -23,43 +24,6 @@ const styles = theme => ({
 
 });
 
-
-{/*
-function ImageGridList(props) {
-  const { classes } = props;
-
-
-
-  return (
-    <div className={classes.root}>
-      <GridList cellHeight={160} className={classes.gridList} cols={3}>
-
-        {cards.map(card => (
-
-          <GridListTile 
-              className="card" 
-              value={card.id}
-              onClick={() => props.handleClick(card.id)}   
-              cols={card.cols || 1}>
-            <img src={(window.location.origin + card.image)} alt={card.title} />
-          </GridListTile>
-
-
-        ))}
-      </GridList >
-    </div>
-  );
-}
-
-
-
-ImageGridList.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(ImageGridList);
-
-*/}
 
 
 
